@@ -1,0 +1,172 @@
+<html>
+<head>
+<title>Shuffle and sort items puzzle</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+ul{
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+}
+.title{
+    text-align: center;
+    margin-bottom: 10px;
+    background-color: #333333;
+    padding: 5px;
+    color:#fff;
+}
+.list-item{
+    background-color: #EFEFEF;
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 10px;
+}
+.action-container{
+    margin: 10px 0;
+    text-align: center;
+}
+.action-container button{
+    margin-right: 5px;
+    background-color: #72C3dc;
+    color:#fff;
+    padding: 10px;
+    border: 1px solid #72C3dc;
+    border-radius: 3px;
+    width: 70px;
+    cursor: pointer;
+}
+@media screen and (max-width: 480px) {
+    .list-item:before {
+        content: '';
+        padding: 0;
+        height: 38px;
+        width: 10px;
+        float: left;
+        margin: -10px;
+    }
+    .list-item:nth-child(1):before{
+        background-color: #6F98AB;
+        
+    }
+    .list-item:nth-child(2):before{
+        background-color: #2B8EAD;
+       
+    }
+    .list-item:nth-child(3):before{
+        background-color: #2F454E;
+    }
+    .list-item:nth-child(4):before{
+        background-color: #2A8EAD;
+    }
+    .list-item:nth-child(5):before{
+        background-color: #2F454E;
+    }
+    .list-item:nth-child(6):before{
+        background-color: #BFBFBF;
+    }
+    .list-item:nth-child(7):before{
+        background-color: #BEBEBE;
+    }
+    .list-item:nth-child(8):before{
+        background-color: #6F98AB;
+    }
+    .list-item:nth-child(9):before{
+        background-color: #2F454E;
+    }
+}
+@media screen and (min-width: 481px) {
+    .title{
+        background-color: #fff;
+    }
+    .row{
+        display: flex;
+    }
+    .cards-grid{
+        width:70%;
+        float: left;
+    }
+    .action-container{
+        width:30%;
+        float: left;
+        order:1;
+    }
+    .action-container button{
+        display: block;
+        width: 100%;
+        margin-bottom:10px;
+        padding:20px; 
+    }
+    .main{
+        max-width: 960px;
+        margin: auto;
+    }
+    .list-item{
+        position: relative;
+        width: 29%;
+        float: left;
+        height: 100%;
+    }
+    .list-item span{
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color:#fff;
+        font-size: 60px;
+    }
+    .list-item:nth-child(1){
+        background-color: #6F98AB;
+    }
+    .list-item:nth-child(2){
+        background-color: #2B8EAD;
+    }
+    .list-item:nth-child(3){
+        background-color: #2F454E;
+    }
+    .list-item:nth-child(4){
+        background-color: #2A8EAD;
+    }
+    .list-item:nth-child(5){
+        background-color: #2F454E;
+    }
+    .list-item:nth-child(6){
+        background-color: #BFBFBF;
+    }
+    .list-item:nth-child(7){
+        background-color: #BEBEBE;
+    }
+    .list-item:nth-child(8){
+        background-color: #6F98AB;
+    }
+    .list-item:nth-child(9){
+        background-color: #2F454E;
+    }
+}
+</style>
+</head>
+<body>
+<div class="main">
+    <div class="title">Shuffle and sort </div>
+    <div class="row">
+        <div class="action-container">
+            <button id="shuffleBtn">Shuffle</button>
+            <button id="sortBtn">Sort</button>
+        </div>
+        <div class="cards-grid">
+            <div id="squareList" class="grid-full">
+                <div class="list-item"><span>1</span></div>
+                <div class="list-item"><span>2</span></div>
+                <div class="list-item"><span>3</span></div>
+                <div class="list-item"><span>4</span></div>
+                <div class="list-item"><span>5</span></div>
+                <div class="list-item"><span>6</span></div>
+                <div class="list-item"><span>7</span></div>
+                <div class="list-item"><span>8</span></div>
+                <div class="list-item"><span>9</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./ArrayShuffle.js"></script>
+</body>
+</html>
